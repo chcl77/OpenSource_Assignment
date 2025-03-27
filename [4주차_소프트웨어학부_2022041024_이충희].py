@@ -16,7 +16,7 @@ def get_total(arr, index) :
     return sum
 #평균 계산 함수
 def get_average(arr, index) :
-    return get_total(arr,index) / 5
+    return get_total(arr,index) // 3
 
 #학점 계산 함수
 def get_score(grade) : 
@@ -30,7 +30,7 @@ def get_score(grade) :
     elif grade >= 65 : return 'D+'
     elif grade >= 60 : return 'D'
     else : return 'F'
-
+#등수 계산 함수
 def Show_Rank(arr) : 
     
     index_grade = [] 
@@ -45,8 +45,43 @@ def Show_Rank(arr) :
     for i in index_grade :
         result.append(list.index(i) + 1)
     return result
-    
 
+#정렬 함수
+def sorting(arr) : 
+    lists = []
+    for i in range(0, 5) :
+        lists.append(get_total(arr, i))
+    print(lists)
+    lists.sort()
+    return lists
+#탐색함수
+def search(arr, idx) :
+    result = []
+    result.append(arr[idx][0])
+    result.append(arr[idx][1])
+    return result 
+#80점 이상 학생 카운트 함수
+def search_over_80(arr) :
+    count = 0
+    lists = []
+    for i in range(0, 5) :
+        lists.append(get_average(arr, i))
+    print(lists)
+    for i in lists :
+            if i >= 80 :
+                count += 1
+    return count 
+#삭제 함수
+def delete_idx(arr, row, col) :
+    arr[row].pop(col)
+    return arr
+#삽입 함수
+def insert_to_arr(arr, row, col, data) :
+    arr[row].insert(col, data)
+    return arr
+
+
+#출력 함수
 def printing(arr) :
     print("                           성적관리 프로그램                            ")
     print("=" * 100)
@@ -77,12 +112,11 @@ def printing(arr) :
 
 
 set = []
-test = ["2022021234" , "가우스" , "90", "90", "90", "100", "100", "100", "1"]
+
 for i in range(1,6) :
     set.append(insert())
 
 printing(set)
 
-    
-    
+
 
