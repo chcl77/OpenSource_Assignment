@@ -1,4 +1,4 @@
-#입력 함수
+
 def insert() :
     grade = []
     
@@ -8,17 +8,17 @@ def insert() :
     grade.append(int(input("C-언어 : ")))
     grade.append(int(input("파이썬 : ")))
     return grade
-#총점 계산 함수
+
 def get_total(arr, index) :
     sum = 0
     for i in range(2, 5) : 
         sum += arr[index][i]
     return sum
-#평균 계산 함수
+
 def get_average(arr, index) :
     return get_total(arr,index) / 5
 
-#학점 계산 함수
+
 def get_score(grade) : 
     
     if grade >= 95 : return 'A+'
