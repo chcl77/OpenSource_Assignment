@@ -21,7 +21,7 @@ def insert() :
     grade.append(int(input("파이썬 : ")))
     return grade
 
-
+#Grade class 생성
 class Grade :
     grade_list = []
 
