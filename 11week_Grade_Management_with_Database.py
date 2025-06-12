@@ -152,7 +152,7 @@ def printing_db() :
     cursor.execute("select * from students_grade") 
     grade = cursor.fetchall()
     grade = list(grade)
-    print("                           성적관리 프로그램                            ")
+    print("                                   성적관리 프로그램                                    ")
     print("=" * 100)
     print("학번           ", end = ' ')
     print("이름      ", end = ' ')
@@ -168,10 +168,10 @@ def printing_db() :
     
     for i in  range(0, 5) : 
         for j in range(0, 9) :
-            if(j >= 2) : 
+            if(j >= 1) : 
                 print(grade[i][j], end = "        ")
             else : 
-                print(grade[i][j], end = "      ")
+                print(grade[i][j], end = "              ")
         print("\n")
 
 set = []
